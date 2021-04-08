@@ -143,6 +143,7 @@
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
                         <br>
                         <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        <button onclick="signOut()">Sign out</button>
                     </div>
                    
 
@@ -160,10 +161,10 @@
                     <div class="image-container">
                         <img src="Untitled design (3).png" class="slide"
                             width="600" height="500" />
-                        <img src="/uploads/media/default/0001/03/b7d624354d5fa22e38b0ab1f9b905fb08ccc6a05.jpeg" class="slide"
-                            width="500" height="300" />
-                        <img src="/uploads/media/default/0001/03/5bfad15a7fd24d448a48605baf52655a5bbe5a71.jpeg" class="slide"
-                            width="500" height="300" />
+                        <img src="work-life-balance-working-from-home.jpg" class="slide"
+                            width="600" height="500" />
+                        <img src="Untitled design (3).png" class="slide"
+                            width="600" height="500" />
                     </div>
                     <div class="buttons">
                         <a href="#slide-1"></a>
@@ -178,6 +179,12 @@
                 gapi.load('auth2'), function(){
                     gapi.auth2.init();
                 }
+
+                function signOut() {
+                        gapi.auth2.getAuthInstance().signOut().then(function () {
+                            console.log('user signed out')
+                        })
+                    }
                 </script>
 
 
